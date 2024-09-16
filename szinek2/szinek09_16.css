@@ -1,0 +1,27 @@
+.container{
+    width: 800px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+}
+#zold{
+    width: 100px;
+    background-color: green;
+    height: 100px;
+    display: none;
+    
+}
+#sarga{
+    width: 100px;
+    background-color: yellow;
+    height: 100px;
+    display: none;
+}
+#lila{
+    width: 100px;
+    background-color: purple;
+    height: 100px;
+}
