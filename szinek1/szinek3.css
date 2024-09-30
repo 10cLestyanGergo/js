@@ -1,0 +1,22 @@
+.container3{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row-reverse
+}
+#zold3{
+    width: 25%;
+    background-color: green;
+    height: 300px;
+    
+}
+#sarga3{
+    width: 50%;
+    background-color: yellow;
+    height: 300px;
+}
+#lila3{
+    width: 25%;
+    background-color: purple;
+    height: 300px;
+}
