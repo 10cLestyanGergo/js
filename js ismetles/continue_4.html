@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function szamolas() {
+            let x=1
+            let elso=true;
+            let masodik=false;
+            let harmadik=false;
+            let i =0;
+            const tomb=[]
+            for(x;x<101;x++){
+                if(x%3==0){
+                    tomb[i]=x;
+                    i++;
+                }
+                
+            }
+            let h=1;
+            
+            for(h;h<101;h++){
+                if(h%3!=0){
+                    document.querySelector(".eredmeny").innerText+="\t"+h+"\t ";
+                }
+                else{
+
+                }
+            }
+            for(let y=0;y<33;y++){
+                        if(elso==true){
+                        elso=false;
+                        masodik=true;
+                        }
+                        else if(masodik==true){
+                        
+                        
+                        document.querySelector(".eredmeny2").innerText+="\t"+tomb[y]+"\t ";
+                        y++;
+                        masodik=false;
+                        harmadik=true;
+                        }
+                        else if(harmadik==true){
+                        elso=true;
+                        document.querySelector(".eredmeny2").innerText+="\t"+tomb[y]+"\t ";
+                        y+=2;
+                        harmadik=false;
+                        }
+                    }
+            
+        }
+           
+           
+            
+        
+    </script>
+</head>
+<body onload="szamolas()">
+    <p class="eredmeny"></p>
+    <p class="eredmeny2"></p>
+</body>
+</html>

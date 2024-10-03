@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="eredmeny"></div>
+    <script>
+        function szo(bemenet) {
+            const megoldas = document.getElementById('eredmeny');
+            for (let betu of bemenet) {
+                if (!/[a-zA-Z]/.test(betu)) {
+                    break;
+                }
+                megoldas.innerHTML += betu;
+            }
+        }
+        szo("Lestyan2024Gergo2024");
+
+    </script>
+</body>
+</html>

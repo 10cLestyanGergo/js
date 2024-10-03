@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>function kopapir(){
+        let elso=parseInt(document.getElementById("elsoember").value);
+        let masodik=parseInt(document.getElementById("masodikember").value);
+        if(1>elso||masodik<1||elso>3||masodik>3||elso%1!=0||masodik%1!=0){
+            document.querySelector(".kopapireredmeny").innerText="Rossz bemenet,adjon meg másikat";
+        }
+        else{
+            if(elso==1){
+                if(masodik==1){
+                    document.querySelector(".kopapireredmeny").innerText="Döntetlen";
+                }
+                else if(masodik==2){
+                    document.querySelector(".kopapireredmeny").innerText="A második játékos nyert";
+                }
+                else if(masodik==3){
+                    document.querySelector(".kopapireredmeny").innerText="Az első játékos nyert";
+                }
+            }
+            else if(elso==2){
+                if(masodik==1){
+                    document.querySelector(".kopapireredmeny").innerText="Az első játékos nyert";
+                }
+                else if(masodik==2){
+                    document.querySelector(".kopapireredmeny").innerText="Döntetlen";
+                }
+                else if(masodik==3){
+                    document.querySelector(".kopapireredmeny").innerText="A második játékos nyert";
+                }
+            }
+            else if(elso==3){
+                if(masodik==1){
+                    document.querySelector(".kopapireredmeny").innerText="A második játékos nyert";
+                }
+                else if(masodik==2){
+                    document.querySelector(".kopapireredmeny").innerText="Az első játékos nyert";
+                }
+                else if(masodik==3){
+                    document.querySelector(".kopapireredmeny").innerText="Döntetlen";
+                }
+            }
+        }
+    }</script>
+</head>
+<body>
+    <input type="password" id="elsoember"></p>
+    <p>második <input type="password" id="masodikember"></p> <button onclick="kopapir()">eredmény</button>
+    <p class="kopapireredmeny"></p>
+    
+</body>
+</html>

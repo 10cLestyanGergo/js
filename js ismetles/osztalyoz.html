@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function szamolas() {
+            let pontszam = parseInt(document.getElementById('pontszam').value);
+            let jegy;
+
+            if (pontszam >= 80&&pontszam<101) {
+                jegy = 'A';
+            } else if (pontszam >= 65&& pontszam<80) {
+                jegy = 'B';
+            } else if (pontszam >= 50&& pontszam<65) {
+                jegy = 'C';
+            } else if (pontszam >= 35&& pontszam<50) {
+                jegy = 'D';
+            } else if(pontszam<35&&pontszam>-1) {
+                jegy = 'F';
+            }
+            else{
+                jegy='nem értelmezhető, adjon meg másik adatot'
+            }
+
+            document.getElementById('eredmeny').textContent = "Osztályzat: " + jegy;
+        }
+    </script>
+</head>
+<body>
+    <p id="eredmeny"></p>
+    <input type="number" id="pontszam">
+    <button onclick="szamolas()">Számolás</button>
+</body>
+</html>

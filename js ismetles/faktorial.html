@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function faktorial(){
+            let szam=parseInt(document.getElementById("faktorialszam").value);
+            let osszeg=1;
+            for(let i=szam;i>0;i--){
+                osszeg=osszeg*i;
+            }
+            document.querySelector(".faktorialiseredmeny").innerText=osszeg
+        }
+    </script>
+</head>
+<body>
+    <h1>Faktoriális számítás</h1>
+    <p><input type="number" id="faktorialszam"><button type="button" onclick="faktorial()">faktoriális</button></p>
+    <p class="faktorialiseredmeny"></p>
+</body>
+</html>

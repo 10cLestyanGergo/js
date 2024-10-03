@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function fizz(){
+        let szam=document.getElementById("fizz").value;
+        for(let i=1;i<=szam;i++){
+
+        
+        if(i%3==0){
+            if(i%5==0){
+                document.querySelector(".fizzeredmeny").innerText+="\tfizzbuzz\t";
+            }
+            else{
+                document.querySelector(".fizzeredmeny").innerText+="\tfizz\t";
+            }
+        }
+        else if(i%5==0){
+            document.querySelector(".fizzeredmeny").innerText+="\t buzz \t";
+        }
+        else{
+            document.querySelector(".fizzeredmeny").innerText+="\t"+i+"\t";
+        }
+        document.querySelector(".fizzeredmeny").innerHTML+="<p>\t</p>"
+    }
+    }</script>
+</head>
+<body>
+    <p><input type="number" id="fizz"><button onclick="fizz()">fizzbuzz</button></p>
+    <p class="fizzeredmeny"></p>
+</body>
+</html>
